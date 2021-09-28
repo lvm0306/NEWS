@@ -45,6 +45,7 @@ def getdata(url, data=None):
             data = '?' + parse.urlencode(data)
             # 使用request（）来包装请求，再通过urlopen（）获取页面。
             url = urljoin(url, data)
+            print(url)
             req = request.Request(url=url, headers=headers, method='GET')
         else:
             req = request.Request(url=url, headers=headers)
