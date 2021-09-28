@@ -83,9 +83,9 @@ DATABASES = {
     'default': {
         'NAME': 'news',  # 数据库名
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'liuseki',  # 用户名
-        'PASSWORD': 'mysql',  # 密码
-        'HOST': '123.60.20.105',  # 主机
+        'USER': '',  # 用户名
+        'PASSWORD': '',  # 密码
+        'HOST': '',  # 主机
         'PORT': '3306',  # 端口
         'useSSL': 'false',
     }
