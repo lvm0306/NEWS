@@ -44,8 +44,7 @@ router.register(r'userFav', view.UserFavViewset, base_name="userFav")
 urlpatterns = [
     re_path('^$', schema_view),
     path('admin/', admin.site.urls),
-    path(r'^api-auth/$', include('rest_framework.urls',
-                                 namespace='rest_framework')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     re_path(r'^login/$', view.UserLogin.as_view(), name="login"),
 
 ]

@@ -83,9 +83,9 @@ DATABASES = {
     'default': {
         'NAME': 'news',  # 数据库名
         'ENGINE': 'django.db.backends.mysql',
-        'USER': 'root',  # 用户名
-        'PASSWORD': 'test',  # 密码
-        'HOST': '192.168.31.140',  # 主机
+        'USER': 'liuseki',  # 用户名
+        'PASSWORD': 'mysql',  # 密码
+        'HOST': '123.60.20.105',  # 主机
         'PORT': '3306',  # 端口
         'useSSL': 'false',
     }
@@ -146,7 +146,6 @@ REST_FRAMEWORK = {
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    '*'
 )
 
 CORS_ALLOW_METHODS = (

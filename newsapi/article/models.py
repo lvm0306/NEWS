@@ -58,7 +58,7 @@ class Article(models.Model):
                            toolbars='mini', filePath='upload/', blank=True)
     status = models.CharField(max_length=2, verbose_name='状态', help_text="状态")
     tags = models.ManyToManyField(Tag, related_name='tags', blank=True, help_text="标签")
-    publish_date = models.DateTimeField(default=datetime.datetime.now(), verbose_name='发布日期', help_text="发布日期")
+    publish_date = models.DateTimeField(default=datetime.datetime.now, verbose_name='发布日期', help_text="发布日期")
     expiration_date = models.DateTimeField(blank=True, null=True, verbose_name='有效日期', help_text="有效日期")
     is_active = models.BooleanField(default=True, blank=True, verbose_name='是否热门', help_text="是否热门")
     item = models.ForeignKey(Item, related_name='item', on_delete=models.CASCADE, verbose_name='类别名称', help_text="类别名称")
