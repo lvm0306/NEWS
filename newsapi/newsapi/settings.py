@@ -12,8 +12,13 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+from libs.config import Config
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 配置文件
+CONFIG = Config(os.path.join(BASE_DIR, ".env")).format()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -79,14 +84,17 @@ WSGI_APPLICATION = 'newsapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+DB_CONFIG = CONFIG["database"]
+
 DATABASES = {
     'default': {
-        'NAME': 'news',  # 数据库名
+        'NAME': DB_CONFIG["db"],  # 数据库名
         'ENGINE': 'django.db.backends.mysql',
-        'USER': '',  # 用户名
-        'PASSWORD': '',  # 密码
-        'HOST': '',  # 主机
-        'PORT': '3306',  # 端口
+        'USER': DB_CONFIG["user"],  # 用户名
+        'PASSWORD': DB_CONFIG["password"],  # 密码
+        'HOST': DB_CONFIG["host"],  # 主机
+        'PORT': DB_CONFIG["port"],  # 端口
+        'CONN_MAX_AGE': 60 * 60 * 2,
         'useSSL': 'false',
     }
 }

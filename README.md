@@ -25,12 +25,12 @@ python manage.py startapp article
 ```
 pip install django==2.0.3
 pip install djangorestframework==3.8.2
-pip install pymysql
-pip install Markdown
-pip install django-filter
-pip install django-crispy-forms
-pip install django-cors-headers
-pip install django-rest-swagger
+pip install pymysql==1.0.2
+pip install Markdown==3.3.4
+pip install django-filter==1.1.0
+pip install django-crispy-forms==1.13.0
+pip install django-cors-headers==3.4.0
+pip install django-rest-swagger==2.2.0
 ```
 ## 五、配置setting.py
 ###### 注册app

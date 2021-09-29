@@ -23,7 +23,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ('name', 'article_count')
 
     def article_count(self, obj):
-        return Article.objects.filter(tag=obj).count()
+        return Article.objects.filter(tags=obj).count()
 
 
 class CategoryAdmin(admin.ModelAdmin):
